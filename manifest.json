@@ -1,0 +1,31 @@
+{
+    "name": "Segoe UI Variable Font Switcher",
+    "description": "Switch the font on websites to Segoe UI Variable Display",
+    "version": "1.2.1",
+    "manifest_version": 3,
+    "permissions": [
+        "webNavigation",
+        "tabs",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "css": [
+                "twitter/FontInject.css"
+            ],
+            "matches": [
+                "https://twitter.com/*"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "css": [
+                "github/FontInject.css"
+            ],
+            "matches": [
+                "https://github.com/*"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
